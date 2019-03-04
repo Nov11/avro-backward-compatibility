@@ -36,7 +36,7 @@ public class Main {
      *
      * @throws IOException
      */
-    private static void makeSureSerailizationWorks() throws IOException {
+    private static void makeSureSerializationWorks() throws IOException {
         DumbClass dumbClass = makeDumbObject();
         writeToFile(fileName, Serializer.serialize(dumbClass, DumbClass.class));
         DumbClass deserialized = Serializer.deserializer(readFromFile(fileName), DumbClass.class);
@@ -50,7 +50,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         // this tests the serializer and generates the output file.
-//        makeSureSerailizationWorks();
+//        makeSureSerializationWorks();
         readOldObjectUsingNewDef();
     }
 }

@@ -10,10 +10,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>avro-idl</artifactId>
+    <!--1.7.7-->
     <!--只有两个字段的版本-->
     <!--<version>1.0-SNAPSHOT</version>-->
     <!--三个字段的版本-->
-    <version>1.1-SNAPSHOT</version>
+    <!--<version>1.1-SNAPSHOT</version>-->
+    <!--1.8.2-->
+    <!--只有两个字段的版本-->
+    <!--<version>2.0-SNAPSHOT</version>-->
+    <!--三个字段的版本-->
+    <version>2.1-SNAPSHOT</version>
+
 
     <build>
         <plugins>

@@ -1,8 +1,8 @@
 #### this is about AVRO backward compatibility
 
-An object DumbClass defined in jar named 1.0-SNAPSHOT is written to file first.
-Update idl with a new field and named it 1.1-SNAPSHOT.
-Read object using the new jar. It fails with this :
+An object DumbClass defined in jar named 1.0-SNAPSHOT is serialized and written to file first.
+Update idl by adding a new field and named the jar 1.1-SNAPSHOT.
+Read the object from file previously created using the new jar. It fails with this :
 ```
 Exception in thread "main" java.io.EOFException
 	at org.apache.avro.io.BinaryDecoder.ensureBounds(BinaryDecoder.java:473)
@@ -24,6 +24,10 @@ Process finished with exit code 1
 ```
 
 
-I haven't found any flaws in serialization code nor idl. So I think AVRO doesn't support backward compatibility.
+I haven't found any flaws in serialization code nor idl. So I think AVRO doesn't support backward compatibility when used in this way.
 
 top level pom & idl's pom are modified during this test.
+
+jar version that begins with 1.0 is using avro version 1.7.7. version that begins with 2.0 is using avro version 1.8.2.
+
+neither of these holds compatibility.
