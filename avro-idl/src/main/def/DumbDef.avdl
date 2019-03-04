@@ -1,0 +1,8 @@
+@namespace("nov11")
+protocol StructDefs{
+  record DumbClass {
+    union {null, int} id = null;
+    union {null, string} name = null;
+    union {null, string} new_field = null;
+  }
+}
